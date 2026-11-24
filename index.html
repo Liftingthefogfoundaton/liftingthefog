@@ -574,3 +574,13 @@ try{if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.w
 fallback();});}
 })();</script>
 </div>
+<!-- CONTACT BUTTON: change the words "Contact us" below to adjust -->
+<a href="#" id="contactBtn" style="position:fixed;bottom:16px;right:16px;z-index:9999;background:#c9a227;color:#fff;padding:12px 18px;border-radius:30px;font-weight:bold;font-family:sans-serif;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.3)">Contact us</a>
+<script>
+document.getElementById('contactBtn').onclick=function(e){
+  e.preventDefault();
+  var h=[...document.querySelectorAll('h1,h2,h3,h4')].find(function(x){return /send us a message/i.test(x.textContent);});
+  (h||document.querySelector('form:last-of-type')).scrollIntoView({behavior:'smooth'});
+};
+</script>
+<!-- END CONTACT BUTTON -->
